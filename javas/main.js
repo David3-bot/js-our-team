@@ -32,29 +32,32 @@ const teamArray = [
         "img": "wayne-barnett-founder-ceo.jpg"
     },
 
-    
-
-
-
-
-
-
 
 ]
 
 console.log (teamArray)
 
+printEmp();
 
 function printEmp() {
     for (i = 0 ; i < teamArray.length; i++){
         const divEl = document.createElement("div");
         divEl.classList.add("card");
         cardsContainerEl.append(divEl);
-        const h2El = document.createElement("h2");
-        h2El.innerHTML = teamArray[ i ].Nome;
-        const h3El = document.createElement("h3");
-        h2El.innerHTML = teamArray[ i ].img;
-        const h4El = teamArray[ i ].Ruolo;
+
+        const pEl = document.createElement("p");
+        pEl.innerHTML = teamArray[ i ].Nome;
+        cardsContainerEl.append(pEl);
+
+        
+        const h3El = document.createElement("h3")
+        h3El.innerHTML = teamArray [ i ].Ruolo;
+        cardsContainerEl.append(h3El);
+
+        const h4El = document.createElement("h4");
+        h4El.innerHTML = teamArray[ i ].img;
+        cardsContainerEl.append(h4El);
+
 
 
     }
